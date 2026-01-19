@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { ScrollToTop } from '@/components/ui/ScrollToTop';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
 
 export const metadata: Metadata = {
   title: 'Flixen™ | Video Production Agency',
@@ -17,13 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className="antialiased">
+        <ScrollProgress />
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
