@@ -6,6 +6,10 @@ import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { AnimatedText } from '@/components/ui/AnimatedText';
+import { FeaturedProjectsSection } from '@/components/sections/FeaturedProjectsSection';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { ProcessSection } from '@/components/sections/ProcessSection';
+import { StatsSection } from '@/components/sections/StatsSection';
 
 export default function HomePage() {
   return (
@@ -122,6 +126,18 @@ export default function HomePage() {
           </FadeIn>
         </Container>
       </section>
+
+      {/* Stats Section */}
+      <StatsSection />
+
+      {/* Featured Projects */}
+      <FeaturedProjectsSection />
+
+      {/* Process Section */}
+      <ProcessSection />
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <section className="py-24 desktop:py-32 bg-primary-yellow text-black">
